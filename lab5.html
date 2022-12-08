@@ -26,7 +26,7 @@
         height: 80%;
     }
     form{
-        box-shadow: 2px 2px 7px 1px grey;
+        box-shadow: 2px 2px 7px 1px rgb(97, 16, 16);
         /* border: 2px solid black; */
         width: 40%;
         display: flex;
@@ -34,24 +34,24 @@
         flex-direction: column;
         margin: auto;
         padding: 0.6rem;
-        background: WHITE;
+        background: rgb(225, 180, 180);
         margin-bottom: 4.9rem;
         margin-top: 4.5rem;
     }
     form:hover{
-        box-shadow: 2px 2px 9px 1px grey;
+        box-shadow: 2px 2px 9px 1px rgb(186, 227, 20);
     }
     h2,h1{
         text-align: center;
     }
     input[type="submit"]
     {
-        border: 2px solid #d29751;
+        border: 2px solid #491004;
         width: 80%;
         text-align: center;
         /* margin: auto; */
         height: 1.9rem;
-        color: white;
+        color: rgb(12, 1, 1);
         background-color: #d29751;
         border-radius: 10px;
         margin-top: 0.7rem;
@@ -60,6 +60,22 @@
         padding-bottom: 1.6rem;
         
     }
+    input[type="submit"]:hover
+    {
+        border: 2px solid #e2dad8;
+        width: 80%;
+        text-align: center;
+        /* margin: auto; */
+        height: 1.9rem;
+        color: rgb(33, 1, 1);
+        background-color: #e2d6c7;
+        border-radius: 10px;
+        margin-top: 0.7rem;
+        /* font-size: larger; */
+        font-size: 1rem;
+        padding-bottom: 1.6rem;
+    }
+    
     input{
         margin-bottom: 1.9rem;
         width: 90%;
@@ -179,15 +195,15 @@
         var number=document.getElementById("number");
         number.onkeydown=function()
         {
-            let regex2=/[0-9]{10}/;
+            let regex2=/[0-9]{9}/;
             if(regex2.test(number.value))
             {
-                span[1].innerText="correct format";
+                span[1].innerText="valid number";
 
             }
             else{
 
-                span[1].innerText="wrong format";
+                span[1].innerText="invalid number";
             }
             
         }
