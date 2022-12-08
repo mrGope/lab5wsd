@@ -1,265 +1,353 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>VoteBox</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-    body{
-        margin: 0;
-        padding: 0;
-        background-image: url("./bg6.webp");
-        /* background-repeat: no-repeat ; */
-        /* background-size: cover; */
-    }
-    nav{
-            height: 100px;
-            /* background-color: #d4af37; */
-            display: flex;
-            justify-content: center;
-    }
-    nav img{
-        height: 80%;
-    }
-    form{
-        box-shadow: 2px 2px 7px 1px rgb(97, 16, 16);
-        /* border: 2px solid black; */
-        width: 40%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin: auto;
-        padding: 0.6rem;
-        background: rgb(225, 180, 180);
-        margin-bottom: 4.9rem;
-        margin-top: 4.5rem;
-    }
-    form:hover{
-        box-shadow: 2px 2px 9px 1px rgb(186, 227, 20);
-    }
-    h2,h1{
-        text-align: center;
-    }
-    input[type="submit"]
-    {
-        border: 2px solid #491004;
-        width: 80%;
-        text-align: center;
-        /* margin: auto; */
-        height: 1.9rem;
-        color: rgb(12, 1, 1);
-        background-color: #d29751;
-        border-radius: 10px;
-        margin-top: 0.7rem;
-        /* font-size: larger; */
-        font-size: 1rem;
-        padding-bottom: 1.6rem;
-        
-    }
-    input[type="submit"]:hover
-    {
-        border: 2px solid #e2dad8;
-        width: 80%;
-        text-align: center;
-        /* margin: auto; */
-        height: 1.9rem;
-        color: rgb(33, 1, 1);
-        background-color: #e2d6c7;
-        border-radius: 10px;
-        margin-top: 0.7rem;
-        /* font-size: larger; */
-        font-size: 1rem;
-        padding-bottom: 1.6rem;
+  
+    table, th, td {
+      border: 1px solid rgb(253, 253, 253);
+      border-collapse: collapse;
     }
     
-    input{
-        margin-bottom: 1.9rem;
-        width: 90%;
-        padding: 0.7rem;
-    }
-</style>
-<body>
+body {
+  font-family: Arial, Helvetica, sans-serif;
   
+    background-image: url("https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+    color: #FFFFFF;
+    overflow-y: scroll;
+    height:150vh;
+
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  }
+.grid img {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+
+</style>
+</head>
+<body>
+<pre><h1>                                               Voters</h1></pre>
+<div class="navbar">
+  
+  
+  <a href="#home">Home</a>
+  <a href="https://github.com/mrGope">My Github</a>
+  <div class="dropdown">
+    <button class="dropbtn">Social media
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="https://www.facebook.com/aditya.kumargope" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/_aditya_gope_/" target="_self">Instagram</a>
+      <a href="https://www.linkedin.com/in/aditya-gope-09b39320b/" target="_blank">linkedIn</a>
+    </div>
+  </div>
+ 
+</div>
+<br><br>
+<main class="grid">
+<br><br>
+  <img src="http://www.google.com/logos/doodles/2018/united-states-elections-2018-5184312390451200.4-2x.png" alt="Sample photo">
+  <img src="https://img.etimg.com/thumb/msid-68707247,width-300,imgsize-819396,,resizemode-4,quality-100/can-my-office-stop-me-from-voting.jpg" alt="Sample photo">
+  <img src="https://imageio.forbes.com/specials-images/dam/imageserve/1063184564/960x0.jpg?format=jpg&width=960" alt="Sample photo">
+  <img src="https://hips.hearstapps.com/hmg-prod/images/lead-image-vote-01-1659036587.jpg" alt="Sample photo">
+ 
+</main>
+
+<h2>Welcome To VOTERS SYSTEM AND SOLUTION</h2>
+    <h5>List of available votes</h5>
+    <ul>
+        <li>College president</li>
+        <li>SYUJ club leader </li>
+        <li>Parliament</li>
+        <li>Programming Languages to be used in class</li>
+    </ul>
+    
+<h2>Registration form</h2>  
+    <form>  
+     <fieldset>  
+        <legend>User personal information</legend>  
+        
 
     <form action="">
-        <nav>
-            <a href="./index.html">
-    
-                <img src="./logo.png" alt="">
-            </a>
-        </nav>
-        <h1>
-            Register for voting
-        </h1>
-        <h2>
-            All fields are necessary
-        </h2>
-        <div>
-            First name
-        </div>
-        <div>
-            <input type="text" id="Fname">
-            
-            <span></span>
-        </div>
+      <nav>
+          <a href="./index.html">
+  
+              <img src="./logo.png" alt="">
+          </a>
+      </nav>
+      <h1>
+          Register for voting
+      </h1>
+      <h2>
+          All fields are necessary
+      </h2>
+      <div>
+          First name
+      </div>
+      <div>
+          <input type="text" id="Fname">
+          
+          <span></span>
+      </div>
 
 
-        <div>
-            Last name
-        </div>
-        <div>
-            <input type="text" id="lname">
-            
-        </div>
-        <div>
-            Constituency Name
-        </div>
-        <div>
-            <input type="text">
-        </div>
+      <div>
+          Last name
+      </div>
+      <div>
+          <input type="text" id="lname">
+          
+      </div>
+      <div>
+          Constituency Name
+      </div>
+      <div>
+          <input type="text">
+      </div>
 
-        <div>
-            Phone number
-        </div>
-        <div>
-            <input type="number" id="number">
-            <span></span>
-        </div>
+      <div>
+          Phone number
+      </div>
+      <div>
+          <input type="number" id="number">
+          <span></span>
+      </div>
 
-        <div>
-            Email
-        </div>
-        <div>
-            <input type="email" id="email">
-            <span id="e"></span>
-        </div>
+      <div>
+          Email
+      </div>
+      <div>
+          <input type="email" id="email">
+          <span id="e"></span>
+      </div>
 
-        <div>
-            Address 1
-        </div>
-        <div>
-            <input type="text">
-        </div>
+      <div>
+          Address 1
+      </div>
+      <div>
+          <input type="text">
+      </div>
 
-        <div>
-            Address 2 (optional)
-        </div>
-        <div>
-            <input type="text">
-        </div>
-        
+      <div>
+          Address 2 (optional)
+      </div>
+      <div>
+          <input type="text">
+      </div>
+      
 
 
-        <div>
-            Password
-        </div>
-        <div>
-            <input type="password" id="password">
-            <span></span>
-        </div>
+      <div>
+          Password
+      </div>
+      <div>
+          <input type="password" id="password">
+          <span></span>
+      </div>
 
-        <div>
-            Confirm Password
-        </div>
-        <div>
-            <input type="password" id="cpassword">
-            <div id="cp"></div>
-        </div>
-        
-        <div style=" display: flex; justify-content: center">
-            <input type="submit" value="submit">
-        </div>
-    </form>
-    <script>
-       
-        
-        var Fname=document.getElementById("Fname");
-        console.log(Fname);
-        var span=document.getElementsByTagName("span");
-        Fname.onkeydown=function()
-        {
-            let regex=/[a-zA-z]/;
-            console.log(Fname.value);
-            if(regex.test(Fname.value))
-            {
-                span[0].innerText="name is valid";
-            }
-            else{
-                span[0].innerText="name is not valid";
-            }
-        }
-        var number=document.getElementById("number");
-        number.onkeydown=function()
-        {
-            let regex2=/[0-9]{9}/;
-            if(regex2.test(number.value))
-            {
-                span[1].innerText="valid number";
+      <div>
+          Confirm Password
+      </div>
+      <div>
+          <input type="password" id="cpassword">
+          <div id="cp"></div>
+      </div>
+      
+      <div style=" display: flex; justify-content: center">
+          <input type="submit" value="submit">
+      </div>
+  </form>
+  <script>
+     
+      
+      var Fname=document.getElementById("Fname");
+      console.log(Fname);
+      var span=document.getElementsByTagName("span");
+      Fname.onkeydown=function()
+      {
+          let regex=/[a-zA-z]/;
+          console.log(Fname.value);
+          if(regex.test(Fname.value))
+          {
+              span[0].innerText="name is valid";
+          }
+          else{
+              span[0].innerText="name is not valid";
+          }
+      }
+      var number=document.getElementById("number");
+      number.onkeydown=function()
+      {
+          let regex2=/[0-9]{9}/;
+          if(regex2.test(number.value))
+          {
+              span[1].innerText="valid number";
 
-            }
-            else{
+          }
+          else{
 
-                span[1].innerText="invalid number";
-            }
-            
-        }
-        var password=document.getElementById("password");
-        password.onkeydown=function(){
-            console.log("hello");
-            let reg=/[a-z][A-Z][0-9][:.@#]/;
-            if(reg.test(password.value)){
-                span[2].innerText="Suitable";
-            }
-            else{
-                span[2].innerText="not suitable";
-            }
-        }
-        var cpassword=document.getElementById("cpassword");
-        var d=document.getElementById("cp");
-        cpassword.onkeydown=function(){
-            console.log("hello");
-            let reg=/[a-z][A-Z][0-9][:.@#]/;
-            if(reg.test(cpassword.value)){
-                cp.innerText="Suitable";
-            }
-            else{
-                cp.innerText="not suitable";
-            }
-        }
-        var email=document.getElementById("email");
-        var e=document.getElementById('e');
-        email.onkeydown=function()
-        {
-            console.log("email one");
-            let rege=/[a-z]\.[a-z]+\@[a-z]+\.+[a-z]{2}/;
-            if(rege.test(email.value))
-            {
-                e.innerText="right format";
-            }
-            else{
-                e.innerText="wrong format of email";
+              span[1].innerText="invalid number";
+          }
+          
+      }
+      var password=document.getElementById("password");
+      password.onkeydown=function(){
+          console.log("hello");
+          let reg=/[a-z][A-Z][0-9][:.@#]/;
+          if(reg.test(password.value)){
+              span[2].innerText="Suitable";
+          }
+          else{
+              span[2].innerText="not suitable";
+          }
+      }
+      var cpassword=document.getElementById("cpassword");
+      var d=document.getElementById("cp");
+      cpassword.onkeydown=function(){
+          console.log("hello");
+          let reg=/[a-z][A-Z][0-9][:.@#]/;
+          if(reg.test(cpassword.value)){
+              cp.innerText="Suitable";
+          }
+          else{
+              cp.innerText="not suitable";
+          }
+      }
+      var email=document.getElementById("email");
+      var e=document.getElementById('e');
+      email.onkeydown=function()
+      {
+          console.log("email one");
+          let rege=/[a-z]\.[a-z]+\@[a-z]+\.+[a-z]{2}/;
+          if(rege.test(email.value))
+          {
+              e.innerText="right format";
+          }
+          else{
+              e.innerText="wrong format of email";
 
-            }
+          }
 
-        }
-       $('#Fname').keydown(function(event){
-        if(event.keyCode>48 && event.keyCode<58)
-        {
-            console.log("here", event.keyCode);
-            event.preventDefault();
-        }
-       })
-       $("#number").keydown(function(event){
-        if(event.keycode>64 && event.keyCode<90)
-        {
-            console.log("character time");
-            event.preventDefault();
-        }
-       })
-    </script>
+      }
+     $('#Fname').keydown(function(event){
+      if(event.keyCode>48 && event.keyCode<58)
+      {
+          console.log("here", event.keyCode);
+          event.preventDefault();
+      }
+     })
+     $("#number").keydown(function(event){
+      if(event.keycode>64 && event.keyCode<90)
+      {
+          console.log("character time");
+          event.preventDefault();
+      }
+     })
+  </script> 
+     </fieldset>  
+  </form>  
+  <h2>GROUP MEMBERS</h2>
+<p>ONLINE VOTING SYSTEM.</p>
+
+
+<table style="width:100%">
+  <tr>
+    <th colspan="2">Name</th>
+    <th>class</th>
+  </tr>
+  <tr>
+    <td>Aditya kumar gope</td>
+    <td>Aniket</td>
+    <td>2mcab</td>
+  </tr>
+  <tr>
+    <td>Kartik</td>
+    <td>Aritra</td>
+    <td>2mcab</td>
+  </tr>
+</table>
+
+
+
 </body>
 </html>
